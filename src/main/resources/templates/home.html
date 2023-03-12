@@ -1,0 +1,12 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head><title>Home Page</title></head>
+<body>
+<h2>How you doing?</h2>
+<form action="#" th:action="@{/save}" th:object="${content}" method="post">
+    <p>Post your Message:</p>
+    <p>Date <input type="date" th:value="${#dates.format(contentDate, 'yyyy-MM-dd')}"  name="contentDate"> </p>
+    <p><textarea type="text" th:value="${content}" name="content" rows="10" cols="70"></textarea></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
