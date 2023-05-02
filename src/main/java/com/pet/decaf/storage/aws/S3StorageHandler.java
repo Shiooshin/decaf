@@ -23,7 +23,7 @@ public class S3StorageHandler implements StorageHandler {
 
     @Autowired
     private S3Client s3Client;
-    @Value("{content.bucket.name}")
+    @Value("${aws.bucket.name}")
     private String bucketName;
 
     @Override
