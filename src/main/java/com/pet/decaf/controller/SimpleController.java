@@ -19,7 +19,6 @@ public class SimpleController {
 
     @GetMapping("/")
     public String homePage(Model model) {
-        handler.getAll();
         model.addAttribute("content", ContentEntity.builder().contentDate(new Date()));
         model.addAttribute("contentDate", new Date());
         return "home";
